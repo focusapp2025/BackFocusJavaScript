@@ -40,7 +40,7 @@ public class Main {
             System.out.println("Ingrese su teléfono:");
             telefonoEstudiante = sc.nextInt();
             sc.nextLine();
-            System.out.println("\n¡¡Te registraste!! :D\nAhora puedes iniciar sesión.");
+            System.out.println("\n¡¡Te registraste correctamente!! :D\nAhora puedes iniciar sesión.");
         }
 
         System.out.println("\nIngrese su usuario:");
@@ -73,58 +73,38 @@ public class Main {
                     System.out.println("\nIntroducción a la programación");
                     System.out.println("Profesor: Jossy Reinaldo Tello Landazuri");
                     System.out.println("Progreso: 40%");
-                    System.out.println("Próxima entrega: Taller de CSS (S2)");
+                    System.out.println("Próxima entrega: Taller de CSS (M2)");
                     break;
                 case 2:
                     System.out.println("\nMetodologías ágiles para la programación");
                     System.out.println("Profesor: Juan Jose Gallego Mesa");
                     System.out.println("Progreso: 72%");
-                    System.out.println("Próxima entrega: Primeras 10 HU listas (S2)");
+                    System.out.println("Próxima entrega: Primeras 10 HU listas (M2)");
                     break;
                 case 3:
-                    System.out.println("\nLógica de programación");
-                    System.out.println("Profesor: Jaime Alberto Zapata Valencia");
+                    System.out.println("\nLógica de programación:");
+                    System.out.println("\nProfesor: Jaime Alberto Zapata Valencia");
                     System.out.println("Progreso: 80%");
-                    System.out.println("Seleccione una opción para ver próximas entregas:");
-                    System.out.println("1. PSE");
-                    System.out.println("2. JAVA");
-                    System.out.println("3. Git");
+                    System.out.println("\nSeleccione una opción para ver próximas entregas:");
+                    System.out.println("\n1. momento 1");
+                    System.out.println("2. momento 2");
+                    System.out.println("3. momento 3");
                     int opcionDeLogica = sc.nextInt();
                     sc.nextLine();
 
                     //Desde aqui se desglosa las opciones que hay dentro de Logica (Solo simulamos este, aunque la idea es que los otros tengan un display parecido)
 
                     if (opcionDeLogica == 1) {
-                        System.out.println("Bienvenido a tu progreso en PSE.");
+                        System.out.println("\nEjercicios básicos de lógica, quiz de conocimiento y desempeño.");
                     } else if (opcionDeLogica == 2) {
-                        System.out.println("Bienvenido a tu progreso en JAVA.");
+                        System.out.println("\nQuiz de  conocimeinto y sustentación de desempeño. Entrega evidencias de Condicionales y JAVA en el proyecto integrador");
                     } else if (opcionDeLogica == 3) {
-                        System.out.println("Bienvenido a tu progreso en Git y GitHub.");
+                        System.out.println("\nTema: Aun no sabemos. Que Dios nos ampare :P");
                     } else {
                         System.out.println("Opción no válida.");
                     }
 
-                    System.out.println("Seleccione el momento:");
-                    System.out.println("1. Momento 1");
-                    System.out.println("2. Momento 2");
-                    System.out.println("3. Momento 3");
-                    int opcionMomento = sc.nextInt();
-                    sc.nextLine();
-
-                    if (opcionMomento == 1) {
-                        System.out.println("Ejercicios básicos de lógica.");
-                        sc.nextLine();  
-                    
-                } else if(opcionMomento == 2) {
-                    System.out.println("Condicionales y JAVA.");
-
-                } else if(opcionMomento == 3){
-                    System.out.println("Que Dios nos ampare :P");
-                    
-                } else {
-                    System.out.println("Opción no válida.");
-                }
-                break;
+                    break;
 
                 // Desde aqui podemos ver la opcion de Estadisticas a la que ingresamos desde resumen
 
@@ -133,7 +113,7 @@ public class Main {
                     int porcentaje1 = 40;
                     int porcentaje2 = 72;
                     int porcentaje3 = 80;
-                    System.out.println("Intro: " + porcentaje1 + "%");
+                    System.out.println("\nIntro: " + porcentaje1 + "%");
                     System.out.println("Logica: " + porcentaje2 + "%");
                     System.out.println("Agilismo: " + porcentaje3 + "%");
                     int promedio = (porcentaje1 + porcentaje2 + porcentaje3) / 3;
@@ -144,37 +124,38 @@ public class Main {
 
                 case 5:
                     System.out.println("\nSocial Focus :D");
-                    System.out.println("Integrantes del grupo:");
-                    System.out.println("1. DonAndres");
-                    System.out.println("2. la-divina");
-                    System.out.println("3. " + nombreUsuario);
-                    System.out.println("¡Bienvenidos a Social Focus! Comparte tus logros y dudas, es un espacio poara que compartas con tu comunidad del CESDE!");
+                    System.out.println("\n¡Bienvenidos a Social Focus! Comparte tus logros y dudas, es un espacio para que compartas con tu comunidad del CESDE");
+                    System.out.println("\nChat general:");
+                    System.out.println("1. DonAndres escribió: Que vamos a hacer para mañana que no hemos hecho el trabajo?? D:");
+                    System.out.println("2. la-divina respondió: Mijo para eso está chatGPT. LOL!");
+                    System.out.println("3. " + nombreUsuario + " reaccionó al mensaje de la-divina con un corazón");
+                    
                     break;
 
                     //Pantalla de config, se accede desde resumen
 
                 case 6:
-                    System.out.println("\nConfiguración");
-                    System.out.println("Seleccione una opción:");
-                    System.out.println("1. Perfil");
+                    System.out.println("\nConfiguración:");
+                    System.out.println("\nSeleccione una opción:");
+                    System.out.println("\n1. Perfil");
                     System.out.println("2. Datos");
                     System.out.println("3. Otros");
                     int opcionConfiguracion = sc.nextInt();
                     sc.nextLine();
 
                     if (opcionConfiguracion == 1) {
-                        System.out.println("Perfil:");
-                        System.out.println("Nombre de usuario: " + nombreUsuario);
+                        System.out.println("\nPerfil:");
+                        System.out.println("\nNombre de usuario: " + nombreUsuario);
                         System.out.println("Edad: " + edad);
                         System.out.println("Carrera: " + carrera);
-                        System.out.println("Genero: " + nickname);
+                        System.out.println("Nickname: " + nickname);
                     } else if (opcionConfiguracion == 2) {
-                        System.out.println("Datos:");
-                        System.out.println("Correo institucional: " + nombreUsuario + "@cesde.net"); 
+                        System.out.println("\nDatos:");
+                        System.out.println("\nCorreo institucional: " + nombreUsuario + "@cesde.net"); 
                         System.out.println("Teléfono: +57 "+ telefonoEstudiante);
                     } else if (opcionConfiguracion == 3) {
-                        System.out.println("Otros:");
-                        System.out.println("Notificaciones: activadas");
+                        System.out.println("\nOtros:");
+                        System.out.println("\nNotificaciones: Activadas");
                         System.out.println("Idioma: Español");
                         System.out.println("Cerrar sesión");
                     } else {
