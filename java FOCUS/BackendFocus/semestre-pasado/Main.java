@@ -1,4 +1,4 @@
-import java.util.Scanner;
+/*import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -6,8 +6,8 @@ public class Main {
 
         //Definicion de variables.
 
-        String usuarioRegistrado = "";
-        String claveRegistrada = "";
+        String usuarioRegistrado = "Admin";
+        String claveRegistrada = "Admin123";
         String nombreUsuario = "";
         String nickname = "";
         int edad = 0;
@@ -175,3 +175,4 @@ public class Main {
     }
 }
 
+*/

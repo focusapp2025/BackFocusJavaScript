@@ -1,13 +1,14 @@
+// Clase principal del proyecto orientado a objetos Focus App
 public class MainPOO {
     public static void main(String[] args) {
         java.util.Scanner sc = new java.util.Scanner(System.in);
         System.out.println("¡Bienvenido al proyecto de Programación Orientada a Objetos!");
 
-        // Inicio de sesión simulado con datos predefinidos
-        ususario usuario = new ususario("UsuarioDemo", "demo@email.com");
-        System.out.println("Inicio de sesión exitoso. Usuario: " + usuario.nombre);
+    // Inicio de sesión simulado con datos predefinidos
+    Usuario usuario = new Usuario("UsuarioDemo", "demo@email.com");
+    System.out.println("Inicio de sesión exitoso. Usuario: " + usuario.nombre);
 
-        // Opción de registro
+    // Opción de registro
         boolean registroCompletado = false;
         String usuarioRegistrado = "a";
         String contrasenaRegistrada = "1";
@@ -53,7 +54,7 @@ public class MainPOO {
                     esAdminStr = sc.nextLine().trim().toLowerCase();
                 } while (!(esAdminStr.equals("si") || esAdminStr.equals("no") || esAdminStr.equals("s") || esAdminStr.equals("n")));
                 boolean esAdmin = esAdminStr.equals("si") || esAdminStr.equals("s");
-                usuario = new ususario(usuarioRegistrado, email, esAdmin);
+                usuario = new Usuario(usuarioRegistrado, email, esAdmin);
                 System.out.println("Usuario creado con los datos ingresados:");
                 usuario.mostrarDatos();
 
@@ -81,7 +82,7 @@ public class MainPOO {
             }
         }
 
-        // Menú de opciones
+    // Menú principal de opciones de la aplicación
         while (true) {
             System.out.println("\nSeleccione una opción:");
             System.out.println("1. Ver resumen");
@@ -92,11 +93,13 @@ public class MainPOO {
             System.out.print("Opción: ");
             String opcion = sc.nextLine();
 
+            // Resumen de la aplicación
             if (opcion.equals("1")) {
                 System.out.print("Escriba el mensaje de resumen: ");
                 String mensaje = sc.nextLine();
                 Resumen resumen = new Resumen(mensaje);
                 resumen.mostrarResumen();
+            // Estadísticas de tareas
             } else if (opcion.equals("2")) {
                 System.out.print("¿Cuántas tareas completadas?: ");
                 int completadas = Integer.parseInt(sc.nextLine());
@@ -104,11 +107,13 @@ public class MainPOO {
                 int pendientes = Integer.parseInt(sc.nextLine());
                 Estadisticas estadisticas = new Estadisticas(completadas, pendientes);
                 estadisticas.mostrarEstadisticas();
+            // Funcionalidad social
             } else if (opcion.equals("3")) {
                 System.out.print("Escriba su publicación: ");
                 String publicacion = sc.nextLine();
                 SocialFocus social = new SocialFocus(publicacion);
                 social.mostrarPublicacion();
+            // Configuración de usuario
             } else if (opcion.equals("4")) {
                 System.out.print("Idioma preferido: ");
                 String idioma = sc.nextLine();
@@ -120,10 +125,12 @@ public class MainPOO {
                 boolean notificaciones = notifStr.equals("si") || notifStr.equals("s");
                 Configuracion config = new Configuracion(idioma, notificaciones);
                 config.mostrarConfiguracion();
+            // Salir de la aplicación
             } else if (opcion.equals("5")) {
                 System.out.println("¡Hasta luego!");
                 break;
             } else {
+                // Opción inválida
                 System.out.println("Opción no válida. Intente de nuevo.");
             }
         }
