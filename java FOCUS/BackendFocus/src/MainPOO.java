@@ -16,7 +16,7 @@ public class MainPOO {
         System.out.println("Seleccione una opción:");
         System.out.println("1. Iniciar sesión");
         System.out.println("2. Registrarse");
-        // Validación de entrada para evitar InputMismatchException
+        // Validación de entrada para evitar un error que me salio: InputMismatchException
         int opcionInicio = -1;
         boolean entradaValida = false;
         while (!entradaValida) {
@@ -168,5 +168,3 @@ public class MainPOO {
     }
 }
 
-// Clase Usuario: representa a un usuario de la aplicación y almacena sus datos personales
-// La clase Usuario ahora se encuentra en Usuario.java y se utiliza aquí
