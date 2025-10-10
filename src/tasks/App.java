@@ -24,3 +24,4 @@ public class App {
         controller.all().forEach(u -> System.out.println("- " + u.getNombre() + " (" + u.getNickname() + ")"));
     }
 }
+
